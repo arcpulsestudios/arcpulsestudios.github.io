@@ -54,6 +54,14 @@ We store that token and your resulting entitlement status (whether Premium is
 active and, for subscriptions, its expiry) solely to grant you the features you
 paid for and to prevent fraud. We do not use it for any other purpose.</p>
 
+<h2>Free trial</h2>
+<p>From version 1.0.15, FreezeBox offers a free Premium trial with no payment
+details. To allow one trial per device, the app sends a <strong>one-way hashed
+device identifier</strong> (derived from Android's per-app device ID, which cannot
+be turned back into the original ID) to our service, which stores it with the
+trial's start and end dates. It is used only to run the trial and prevent repeat
+trials, never for advertising or tracking, and is not shared with third parties.</p>
+
 <h2>Permissions and why we use them</h2>
 <ul>
   <li><strong>Query all packages</strong> — to list your installed apps so you can select which ones to freeze. This is the app’s core function; the list stays on your device.</li>
@@ -63,15 +71,16 @@ paid for and to prevent fraud. We do not use it for any other purpose.</p>
 </ul>
 
 <h2>Data storage and security</h2>
-<p>All data sent for purchase verification is transmitted over encrypted HTTPS.
-Purchase tokens and entitlement records are stored on our managed backend
+<p>All data sent for purchase verification and free trials is transmitted over
+encrypted HTTPS. Purchase tokens, entitlement records and free-trial records are
+stored on our managed backend
 (Supabase) with access restricted to the service. App preferences and your
 loadouts are stored locally on your device.</p>
 
 <h2>Data retention and deletion</h2>
 <p>Purchase/entitlement records are retained while your entitlement is active and
 for as long as needed for support and fraud prevention. To request deletion of
-your purchase-verification record, contact us at the address below. You can
+your purchase-verification or free-trial record, contact us at the address below. You can
 reset the analytics app-instance ID at any time by clearing FreezeBox's storage
 or reinstalling the app.</p>
 
