@@ -12,20 +12,47 @@
 </head>
 <body>
 <h1>FreezeBox — Privacy Policy</h1>
-<p><strong>Effective date:</strong> 26 September 2026<br>
+<p><strong>Effective date:</strong> 30 September 2026<br>
 <strong>App:</strong> FreezeBox (<code>com.arcpulsestudios.freeze_box</code>)<br>
 <strong>Developer:</strong> Arc Pulse Studios</p>
 
 <p>FreezeBox is a utility that lets you freeze (disable) and unfreeze apps on your
-own device without root. We designed it to keep your data on your device. This
-policy explains exactly what the app does and does not do with your information.</p>
+own device without root. App-management data stays on your device; analytics,
+advertising and purchase verification involve the services described below.
+This policy includes the rewarded-ad release from version 1.0.16 and relevant
+records retained from older versions.</p>
 
 <h2>Information we do NOT collect</h2>
 <ul>
-  <li>We do <strong>not</strong> collect your name, email, contacts, location, or any personal profile.</li>
-  <li>We do <strong>not</strong> use advertising, and we do <strong>not</strong> sell or share your data with data brokers.</li>
+  <li>FreezeBox does not require an account or ask for your name or email to function. If you contact support, we receive the information you choose to provide.</li>
+  <li>FreezeBox does not access contacts, messages, photos or precise GPS location. Advertising services may infer approximate location from your IP address.</li>
   <li>The <strong>list of apps installed on your device</strong> is read on your device so you can choose what to freeze. This list is used only on the device and is <strong>never transmitted to us or anyone else</strong>.</li>
 </ul>
+
+<h2>Rewarded advertising and privacy choices</h2>
+<p>From version 1.0.16, free users can choose to watch a <strong>Google AdMob
+rewarded ad</strong> to activate a loadout. Activation is granted after the ad
+reports that the reward was earned. Premium activation is ad-free. Deactivating
+loadouts and manually unfreezing apps do not require ads.</p>
+<p>Google Mobile Ads collects and shares information for ad delivery and
+measurement, analytics and fraud prevention, including:</p>
+<ul>
+  <li>IP address, which may be used to estimate approximate location.</li>
+  <li>Device and other identifiers, including Android advertising ID and app set ID, where available.</li>
+  <li>Interactions such as ad views, taps and video views.</li>
+  <li>Diagnostics about app and SDK performance.</li>
+</ul>
+<p>Data handling depends on privacy choices, device settings and service
+configuration. FreezeBox uses Google's User Messaging Platform to request privacy
+choices where required and checks whether ads may be requested. When available,
+use <strong>Settings &gt; Ad privacy choices</strong> to revisit those choices.
+You can also manage your advertising ID in Android settings. Non-personalized or
+limited ads may still involve data processing. FreezeBox does not send your
+installed-app inventory or loadout contents to advertising services.</p>
+<p>See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>,
+<a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>,
+and the <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads data disclosure</a>.
+Premium removes ads, but does not disable analytics or purchase verification.</p>
 
 <h2>App usage analytics</h2>
 <p>From version 1.0.11, FreezeBox uses <strong>Google Analytics for Firebase</strong>
@@ -39,9 +66,9 @@ collects:</p>
   device information (model, Android version, country, app version).</li>
 </ul>
 <p>Analytics never includes the names of the apps you freeze or the list of apps
-installed on your device. We do not use analytics data for advertising, and it is
-not sold or shared with third parties for their own purposes. Data is processed by
-Google as our service provider under the
+installed on your device, or your loadout contents. Firebase Analytics
+advertising-ID collection is disabled in FreezeBox. AdMob processing is separate
+from Firebase Analytics. Analytics data is processed by Google under the
 <a href="https://firebase.google.com/support/privacy">Firebase privacy terms</a>
 and kept for up to 14 months.</p>
 
@@ -49,23 +76,25 @@ and kept for up to 14 months.</p>
 <p>If you buy FreezeBox Premium, the payment is processed entirely by
 <strong>Google Play</strong>; we never see your card or payment details. To confirm
 your purchase is genuine and active, the app sends the Google Play
-<strong>purchase token</strong> for your transaction to our verification service.
+<strong>product ID and purchase token</strong> to our Supabase-hosted verification service.
 We store that token and your resulting entitlement status (whether Premium is
 active and, for subscriptions, its expiry) solely to grant you the features you
 paid for and to prevent fraud. We do not use it for any other purpose.</p>
 
-<h2>Free trial</h2>
-<p>From version 1.0.15, FreezeBox offers a free Premium trial with no payment
-details. To allow one trial per device, the app sends a <strong>one-way hashed
-device identifier</strong> (derived from Android's per-app device ID, which cannot
-be turned back into the original ID) to our service, which stores it with the
-trial's start and end dates. It is used only to run the trial and prevent repeat
-trials, never for advertising or tracking, and is not shared with third parties.</p>
+<h2>Older free-trial records</h2>
+<p>Version 1.0.16 removes the app-managed three-day Premium trial and no longer
+sends a device identifier to request that trial. Older versions may still send a
+hashed identifier derived from Android's per-app device ID to our service, which
+stores it with trial start and end dates to enforce one trial per device.
+Existing records have not automatically been deleted. They are used for legacy
+trial administration and fraud prevention, not advertising. You may request
+deletion as described below.</p>
 
 <h2>Permissions and why we use them</h2>
 <ul>
   <li><strong>Query all packages</strong> — to list your installed apps so you can select which ones to freeze. This is the app’s core function; the list stays on your device.</li>
-  <li><strong>Internet / network state</strong> — for the on-device wireless-ADB connection that performs freezing, to verify purchases with Google Play, and to send app usage analytics.</li>
+  <li><strong>Internet / network state</strong> — for the local wireless-ADB connection, purchase verification, catalog downloads, analytics, ads and privacy-choice requests.</li>
+  <li><strong>Advertising ID</strong> — for Google Mobile Ads where available and permitted by device settings and applicable privacy choices.</li>
   <li><strong>Notifications</strong> — to guide the one-time Wireless Debugging pairing.</li>
   <li><strong>Billing</strong> — to offer Premium via Google Play.</li>
 </ul>
@@ -75,14 +104,30 @@ trials, never for advertising or tracking, and is not shared with third parties.
 encrypted HTTPS. Purchase tokens, entitlement records and free-trial records are
 stored on our managed backend
 (Supabase) with access restricted to the service. App preferences and your
-loadouts are stored locally on your device.</p>
+loadouts are stored locally on your device. Google Mobile Ads encrypts its
+collected data in transit using TLS. No storage or transmission system can
+guarantee absolute security.</p>
+<p>Google receives data for advertising, analytics and payments as described above;
+Supabase hosts our verification records. We do not sell app inventories or loadout
+data to data brokers. These providers may process data outside your country
+under their applicable privacy policies.</p>
 
 <h2>Data retention and deletion</h2>
 <p>Purchase/entitlement records are retained while your entitlement is active and
 for as long as needed for support and fraud prevention. To request deletion of
-your purchase-verification or free-trial record, contact us at the address below. You can
-reset the analytics app-instance ID at any time by clearing FreezeBox's storage
-or reinstalling the app.</p>
+your purchase-verification or legacy trial record, use the developer contact
+linked below. Legacy trial records are retained for trial administration and
+fraud prevention. Google handles advertising data under its own retention
+policies and applicable privacy choices.</p>
+<p>You may also contact us to request access or correction; rights depend on your
+location. We may need information to identify your record. Do not send passwords
+or payment-card details. Deletion may affect Premium restoration until Google
+Play supplies the purchase again. Deleting records does not cancel a subscription;
+manage subscriptions in Google Play.</p>
+<p>Clearing FreezeBox's storage removes local preferences and loadouts and resets
+the local analytics app-instance identity. It does not itself delete server-side
+records already collected. Use the ad privacy choices described above and
+Google's privacy controls for data Google handles.</p>
 
 <h2>Children</h2>
 <p>FreezeBox is a device-management tool intended for adults and is not directed
@@ -94,6 +139,6 @@ effective date on this page.</p>
 
 <h2>Contact</h2>
 <p>Questions or data-deletion requests can be sent to the developer contact
-shown on FreezeBox's Google Play listing — Arc Pulse Studios.</p>
+shown on <a href="https://play.google.com/store/apps/details?id=com.arcpulsestudios.freeze_box">FreezeBox's Google Play listing</a> — Arc Pulse Studios.</p>
 </body>
 </html>
