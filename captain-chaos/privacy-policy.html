@@ -12,12 +12,15 @@
 </head>
 <body>
 <h1>Captain Chaos — Privacy Policy</h1>
-<p><strong>Effective date:</strong> 29 September 2026<br>
+<p><strong>Effective date:</strong> 3 October 2026<br>
 <strong>Game:</strong> Captain Chaos (<code>com.arcpulsestudios.captainchaos</code>)<br>
-<strong>Developer:</strong> Arc Pulse Studios — <a href="mailto:arcpulsestudios@gmail.com">arcpulsestudios@gmail.com</a></p>
+<strong>Platforms:</strong> Android and iOS<br>
+<strong>Developer:</strong> Arc Pulse Studios<br>
+<strong>iOS publisher and privacy contact:</strong> Omnexia Technologies Private Limited — <a href="mailto:arcpulsestudios@gmail.com">arcpulsestudios@gmail.com</a></p>
 
 <p>Captain Chaos is a single-player tow-surfing game. You do not create an account
-with us and we never ask for your name, email, contacts or precise location. This
+with us and gameplay does not ask for your name, email, contacts or precise location. If you
+email support, we receive your email address and the information you choose to send. This
 policy explains what the game and the services it uses collect, why, and the
 choices you have.</p>
 
@@ -25,38 +28,44 @@ choices you have.</p>
 <table>
   <tr><th>Data</th><th>Why</th><th>Who processes it</th></tr>
   <tr><td>Game progress (levels, stars, coins, gems, unlocked items, purchase order IDs) and an anonymous player ID</td>
-      <td>Cloud save, so progress survives reinstalling or changing phones</td><td>Unity Gaming Services</td></tr>
+      <td>Cloud save and restoring progress when the same Unity player identity is available</td><td>Unity Gaming Services</td></tr>
   <tr><td>Google Play Games player ID, display name and avatar</td>
-      <td>Sign-in, leaderboards, achievements, linking your cloud save</td><td>Google Play Games Services, Unity Authentication</td></tr>
+      <td>Android sign-in, leaderboards, achievements, linking your cloud save</td><td>Google Play Games Services, Unity Authentication</td></tr>
   <tr><td>Advertising ID, device and network information, approximate location (from IP), ad interactions</td>
       <td>Showing optional rewarded ads and occasional interstitial ads, measuring and limiting them</td><td>Unity LevelPlay (ironSource) and its ad partners</td></tr>
   <tr><td>Gameplay events (for example level started, completed or failed), device model, OS version, country, app version</td>
       <td>Understanding which levels are too hard or too easy and improving the game (only with your consent)</td><td>Unity Analytics</td></tr>
   <tr><td>Crash reports and error logs with device model and OS version</td>
-      <td>Finding and fixing crashes</td><td>Unity Cloud Diagnostics, Google Play (Android vitals)</td></tr>
-  <tr><td>Purchase details</td><td>Delivering gems, Remove Ads and packs you buy</td><td>Google Play Billing</td></tr>
+      <td>Finding and fixing crashes</td><td>Unity diagnostics, Google Play (Android vitals), Apple diagnostics according to your system sharing settings</td></tr>
+  <tr><td>Purchase details and transaction IDs</td><td>Delivering gems, Remove Ads and packs you buy; restoring permanent purchases</td><td>Google Play Billing on Android, Apple App Store on iOS, Unity IAP and Unity Cloud Save</td></tr>
+  <tr><td>Support email address and information you send</td><td>Responding to support and deletion requests</td><td>Arc Pulse Studios and the publisher's support team</td></tr>
 </table>
 
 <h2>Cloud save and sign-in</h2>
 <p>When the game starts it signs in to <strong>Unity Authentication</strong> with an
-anonymous player ID and, if you use Google Play Games, links it to your Play Games
-account. Your game progress is stored in <strong>Unity Cloud Save</strong> so it can
-be restored after reinstalling. It contains only game data: level progress, stars,
+anonymous player ID and, on Android if you use Google Play Games, links it to your Play Games
+account. Your game progress is stored in <strong>Unity Cloud Save</strong>. Restoring
+progress requires access to the same Unity player identity. The current iOS release
+uses anonymous sign-in and does not link to Game Center; recovery after reinstalling
+or changing devices is not guaranteed. Android and iOS progress is not automatically shared.
+Cloud saves contain game data: level progress, stars,
 coins and gems, the daily chest streak, unlocked and equipped cosmetics, whether
-you bought Remove Ads or the starter pack, and the Google Play order IDs of your
+you bought Remove Ads or the starter pack, and the store transaction IDs of your
 purchases (to prevent duplicate delivery). Audio settings stay on your device.</p>
 
 <h2>Leaderboards and achievements</h2>
-<p>If you sign in to <strong>Google Play Games</strong>, your scores (for example
+<p>On Android, if you sign in to <strong>Google Play Games</strong>, your scores (for example
 Endless distance, total stars, highest level) and achievements are sent to Google
 Play Games and shown with your Play Games name and avatar to other players. You can
 manage your Play Games profile and visibility in the Google Play Games app. See the
 <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p>The current iOS release does not provide Game Center leaderboards, achievements or account linking.</p>
 
 <h2>Advertising</h2>
 <p>Ads are optional rewards (for example a second chance or double coins) plus an
-occasional interstitial ad between levels, never after a failed level, and never
-if you bought Remove Ads. Ads are delivered by <strong>Unity LevelPlay</strong>
+occasional interstitial ad between levels, never after a failed level. Remove Ads and
+the starter pack remove interstitial ads; optional rewarded ads remain available.
+Ads are delivered by <strong>Unity LevelPlay</strong>
 (ironSource) which may use mediated ad networks. They may collect your device's
 advertising ID, device and network information, IP address (for approximate
 country or region) and how you interact with ads.</p>
@@ -67,38 +76,52 @@ not personalized. You can also reset or delete your advertising ID in your
 Android settings. See the
 <a href="https://developers.is.com/ironsource-mobile/general/privacy-policy/">LevelPlay (ironSource) privacy policy</a>
 and <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's privacy policy</a>.</p>
+<p>On iOS, the game requests <strong>App Tracking Transparency (ATT)</strong> permission
+before initializing ads when a permission request is needed. Permission is optional.
+Personalized-ad consent requires both your in-game choice and Apple's tracking authorization.
+If you deny tracking, the game does not authorize advertising tracking or access to IDFA;
+ad providers may still process information needed for contextual ads, delivery, fraud prevention
+and measurement that does not constitute tracking. You can change Apple's permission in
+<strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong>. Refusing permission does not block gameplay.</p>
 
 <h2>Analytics and crash reports</h2>
 <p>With your consent (the same choice as personalized ads, changeable in Settings),
-the game sends anonymous gameplay events to <strong>Unity Analytics</strong>, such as
+the game sends gameplay events associated with a pseudonymous player identifier to <strong>Unity Analytics</strong>, such as
 which level you started, finished or failed and how far you went in Endless mode.
 We use this only to balance and improve the game. If you decline, no analytics
 events are sent.</p>
 <p>If the game crashes or hits an error, a crash report (stack trace, device model,
 OS and app version) may be sent to <strong>Unity Cloud Diagnostics</strong> and to
-Google Play through Android vitals so we can fix it. Crash reports contain no
-personal profile information.</p>
+Google Play through Android vitals so we can fix it. On iOS, Apple may process crash
+and performance reports according to your system analytics-sharing settings. Diagnostic
+reports may include technical identifiers; they are not necessarily anonymous.</p>
 
 <h2>Purchases</h2>
-<p>In-app purchases are processed entirely by <strong>Google Play</strong>. We never
-see your card or payment details. The game checks the purchase receipt on your
-device and stores the order ID in your cloud save so each purchase is delivered
-exactly once.</p>
+<p>Payments are processed by <strong>Google Play on Android</strong> and the
+<strong>Apple App Store on iOS</strong>, through Unity IAP. We do not receive your
+card or bank details. The game processes product IDs, purchase status and transaction
+IDs to deliver rewards, prevent duplicate delivery and restore owned non-consumables.</p>
+<p>On iOS, use <strong>Restore Purchases</strong> in the gem shop with the Apple Account
+that made the purchase to restore permanent benefits such as interstitial-ad removal
+and the starter pack's board. Consumable gem packs and one-time bonus gems are not replayed
+by entitlement restoration. See <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</p>
 
 <h2>What we do not do</h2>
 <ul>
   <li>We do not sell your data.</li>
-  <li>We do not collect your name, email, phone number, contacts, photos or precise location.</li>
+  <li>Gameplay does not request your name, email, phone number, contacts, photos or precise location. Support receives information you voluntarily send.</li>
   <li>We do not use analytics data for advertising.</li>
 </ul>
 
 <h2>Data retention and deletion</h2>
 <p>Cloud save data is kept while you play and deleted on request. Analytics data is
 kept by Unity for up to 13 months. To delete your cloud save and associated player
-ID, email <a href="mailto:arcpulsestudios@gmail.com">arcpulsestudios@gmail.com</a>
-from the email address you use with Google Play and include your Play Games name;
-we will delete it within 30 days. Uninstalling the game removes the data stored on
-your device.</p>
+ID, follow our <a href="delete-data.html">Android and iOS deletion instructions</a>.
+We may need information identifying the correct Unity player record; an Apple Account
+email alone does not identify an anonymous iOS cloud save. We aim to complete verified
+requests within 30 days, subject to applicable law. Support correspondence is retained
+as needed to resolve requests and meet legal obligations. Uninstalling removes local
+app data, but does not itself delete cloud data or store purchase records.</p>
 
 <h2>Security</h2>
 <p>All data is sent over encrypted connections (HTTPS) to the services listed above,
@@ -114,6 +137,7 @@ If you believe a child has provided data, contact us and we will delete it.</p>
 on this page.</p>
 
 <h2>Contact</h2>
-<p>Arc Pulse Studios — <a href="mailto:arcpulsestudios@gmail.com">arcpulsestudios@gmail.com</a></p>
+<p>Arc Pulse Studios / iOS publisher Omnexia Technologies Private Limited —
+<a href="mailto:arcpulsestudios@gmail.com">arcpulsestudios@gmail.com</a></p>
 </body>
 </html>
